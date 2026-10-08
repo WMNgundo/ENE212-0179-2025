@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int correctpin = 45637;
+int userpin;
+int attempts = 0;
+while(attempts < 3 ){
+        printf("please provide pin");
+        scanf("%d",&userpin);
+    if (userpin==correctpin){
+        printf("access granted");
+        break;
+    }
+    else if (userpin<9999||userpin>99999){
+        printf("please enter five digit pin\n");
+    }
+
+   else{
+        attempts ++;
+        printf("access denied\n");
+     }
+}
+if(attempts==3){
+    printf("account locked");
+}
+
+
+
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char characterName[50];
+      printf("please provide yourname\n");
+    scanf("%s",characterName);
+    printf("hello%s",characterName);
+    return 0;
+}
