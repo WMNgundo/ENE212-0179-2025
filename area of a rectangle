@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{    double area;
+     double l;
+     double w;
+     //capture input from the user
+     printf(" provide width");
+     printf("provide length");
+     scanf("%lf",&w,&l);
+     area= l * w;
+     printf("area of the rectangle is %lf",area)
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char characterName[50];
+      printf("please provide yourname\n");
+    scanf("%s",characterName);
+    printf("hello%s",characterName);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+     int num1, num2, sum;
+     //ask user for the first number
+     printf("enter first number : ");
+     scanf("%d",&num1);
+      //ask user for the second number
+      printf("enter the second number : ");
+      scanf("%d",&num2);
+      //add the numbers together
+      sum = num1 + num2 ;
+      //print the result
+      printf("the total is %d\n",sum);
+    return 0;
+}
