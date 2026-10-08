@@ -3,9 +3,13 @@
 
 int main()
 {
-    char characterName[50];
-      printf("please provide yourname\n");
-    scanf("%s",characterName);
-    printf("hello%s",characterName);
-    return 0;
+  double area ;
+  const double pi = 3.1422;
+  double r;
+  //capture input from user
+  printf("provide radius");
+  scanf("%lf",& r);
+  area = pi * r *r ;
+  printf ("area of circle is %lf ",area);
+  return 0;
 }
