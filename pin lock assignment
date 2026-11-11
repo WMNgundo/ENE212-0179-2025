@@ -1,0 +1,54 @@
+
+ #include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int correctPin=1998;
+  int userPin;
+  int attempts=0;
+  while (attempts<3){
+        printf("please eneter pin");
+        scanf("%d",&userPin);
+  if (userPin==correctPin){
+     int menuchoice;
+       printf("please choose from the below menu\n");
+       printf("1.open the door\n"
+              "2.turn on the lights\n"
+              "3.turn on the fan\n"
+              "4.exit the room\n");
+       scanf("%d",&menuchoice);
+       switch(menuchoice){
+     case 1:
+    printf(" access granted door opening\n");
+    break;
+   case 2:
+    printf("access granted LED lights on\n");
+    break;
+   case 3:
+    printf("access granted fan speed is 20km/h\n");
+    break;
+   case 4:
+    printf("exiting the system\n POWER OFF\n");
+    break;
+   default:
+    printf("invalid choice try again\n");
+           }
+
+    break;
+  }
+  else if (userPin<999||userPin>9999){
+    printf("please enter 4 digit pin\n");
+     attempts++;
+  }
+  else {
+        attempts++;
+            printf("access denied\n");
+
+  }
+  }
+  if (attempts==3){
+    printf("access blocked\n");
+  }
+  return 0;
+}
