@@ -1,0 +1,45 @@
+  #include <stdio.h>
+int main()
+{
+    char Studentname[20];
+printf("please enter the name of student\n");
+scanf("%s",&Studentname);
+int registrationNo;
+printf("please enter the student registration number\n");
+scanf("%d",&registrationNo);
+  int gradeNumber;
+  printf("enter gradeNumber");
+  scanf("%d",&gradeNumber);
+  switch(gradeNumber){
+     case 40:
+        printf("fair\n");
+        printf("grade is D\n ");
+        break;
+     case 50:
+        printf("passed\n");
+        printf("grade is C\n");
+        break;
+    case 60:
+        printf("good");
+        printf("grade is B\n");
+        break;
+    case 70 :
+        printf("excellent");
+        printf("grade is A\n");
+        break;
+    case 35 :
+        printf("supplimentary");
+        printf("grade is #\n");
+        break;
+
+    default:
+        printf("invalid grade");
+        printf("unable to assign grade");
+        }
+printf("student name:%s",Studentname);
+printf("reg no:%d",registrationNo);
+printf("grade:%d",gradeNumber);
+   return 0;
+
+
+}
