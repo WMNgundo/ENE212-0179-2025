@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+void login(){
+printf("please enter your credentials\n"
+       "enter username\n"
+       "enter pin\n");
+}
+void checklistMenu(){
+printf("choose from the menu below\n"
+       "1.deposit cash\n"
+        "2.check balance\n"
+        "3.withdraw cash\n"
+        "4.display remaining balance\n");
+        }
+void menuChoice(){
+int choice;
+printf("please enter your desired choice\n");
+scanf("%d",&choice);
+
+}
+int depositCash(int balance){
+    int amount;
+    printf("amount to be deposited:\n");
+    scanf("%d",&amount);
+    return balance+amount; }
+int withdrawCash(int balance){
+int amount;
+printf("amount to be withdrawn:\n");
+scanf("%d",&amount);
+return balance - amount;}
+int main(){
+char correctuserName[20]="mercy";
+int correctuserPin=94847;
+int userPin;
+char userName[20];
+int balance = 554;
+int attempts =0;
+for ( attempts=0;attempts<3;attempts++){
+login();
+scanf("%s",userName);
+scanf("%d",&userPin);
+ if (strcmp(userName,correctuserName)==0&&correctuserPin==userPin){
+   checklistMenu();
+int choice;
+printf("please enter your desired choice\n");
+scanf("%d",&choice);
+   switch(choice) {
+    case 1:
+    printf("total balance:sh 554");
+    break;
+case 2 :
+   balance=depositCash(balance);
+   printf("total amount : %d\n",balance);
+    break;
+case 3:
+   balance=
+   withdrawCash(balance);
+   printf("total balnce:%d\n",balance);
+   break;
+case 4:
+    printf("your reamining balance is:sh%d\n",balance);
+    break;
+default:
+    printf("invalid entry\n");
+    break;
+    }
+break;
+}
+else{
+    printf("invalid logins\n");
+    attempts ++;
+    }
+}
+if (attempts==3){
+    printf("access blocked\n");
+}
+return 0;
+}
+
+
+
+
