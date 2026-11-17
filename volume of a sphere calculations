@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int square(int n){
-return n * n ;}
+int volume(int n){
+return n * n *n;}
 int main(){
 int results;
-results = square(6);
+const phi=3.142;
+results = 4/3 * phi * volume(6);
 printf("%d",results);
 return 0;
 }
